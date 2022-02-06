@@ -14,6 +14,16 @@ const getRootDir = async (dir = process.cwd()) => {
 
   return rootDir
 }
+const readFile = util.promisify(fs.readFile)
+const getIndexFile = async (dir = process.cwd()) => {
+  const pathToIndex = path.join(dir, '..', 'index.html')
+  const indexFile = await readFile(pathToIndex)
+
+  if (!indexFile) {
+    throw new Error(`Could not find ${pathToIndex}`)
+  }
+  return indexFile
+}
 
 describe('first-tutorial folder', () => {
   let rootDir
@@ -23,5 +33,16 @@ describe('first-tutorial folder', () => {
 
   it('should have an index.html file', async () => {
     assert(rootDir.indexOf('index.html') >= 0)
+  })
+})
+
+describe('index.html', () => {
+  let indexFile
+  before(async () => {
+    indexFile = await getIndexFile()
+  })
+
+  it('should have a DOCTYPE', () => {
+    assert(/<!doctype html>/i.test(indexFile))
   })
 })
