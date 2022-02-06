@@ -58,6 +58,34 @@
           }
         }
       ]
+    },
+    {
+      "id": "2",
+      "title": "Add DOCTYPE",
+      "summary": "Add a DOCTYPE to an HTML file",
+      "content": "HTML files should have a `DOCTYPE`. You can add one at the top of the `index.html` file like this: `<!DOCTYPE html>`.",
+      "steps": [
+        {
+          "id": "2.1",
+          "setup": {
+            "files": [
+              "index.html"
+            ],
+            "commits": [
+              "7f800e2367ac6365116d13a71ed4654f1c6268b4"
+            ]
+          },
+          "content": "Add the DOCTYPE",
+          "hints": [
+            "Add `<!DOCTYPE html>` at the top of `index.html` and save the file"
+          ],
+          "solution": {
+            "commits": [
+              "68a03b813494d08c39fd06202e9c75d273c1f6ea"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
