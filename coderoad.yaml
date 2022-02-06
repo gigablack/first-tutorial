@@ -20,8 +20,10 @@ levels:
     steps:
       - id: '1.1'
   - id: '2'
-    steps: '2.1'
-      setup:
-        files:
-          - index.html
+    steps:
+      - id: '2.1'
+        setup:
+          files:
+            - index.html
+
 
