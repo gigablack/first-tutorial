@@ -1,0 +1,63 @@
+{
+  "id": "0.1.0",
+  "version": "0.1.0",
+  "summary": {
+    "title": "Introduction",
+    "description": "This is an introduction to your tutorial. It will show up on the first page when your tutorial is started."
+  },
+  "config": {
+    "testRunner": {
+      "command": "./node_modules/.bin/mocha",
+      "args": {
+        "tap": "--reporter=mocha-tap-reporter"
+      },
+      "directory": "coderoad"
+    },
+    "setup": {
+      "commands": [
+        "cd coderoad && npm install"
+      ],
+      "commits": [
+        "19340c16d800248456fd7c797826620f728fd911"
+      ]
+    },
+    "repo": {
+      "uri": "https://github.com/gigablack/first-tutorial",
+      "branch": "v0.1.0"
+    },
+    "dependencies": [
+      {
+        "name": "node",
+        "version": ">=10"
+      }
+    ]
+  },
+  "levels": [
+    {
+      "id": "1",
+      "title": "Create index.html",
+      "summary": "Optional summary for Level 1",
+      "content": "Here's where you can put a description, examples, and instructions for the lesson.",
+      "steps": [
+        {
+          "id": "1.1",
+          "content": "This is the test text. Create an `index.html` file to pass this lesson.",
+          "hints": [
+            "This is a hint to help people through the test",
+            "Second hint for 1.1, don't worry if the hints don't show up yet"
+          ],
+          "setup": {
+            "commits": [
+              "bb6a31633a3444bd3f213079f779e932f9aab8ed"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "62d066b92ddb23557342351c5cb22a7f2284e2c9"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
