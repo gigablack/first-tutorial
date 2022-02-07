@@ -15,6 +15,10 @@ config:
   dependencies:
     - name: node
       version: '>=10'
+  webhook:
+    url: http:localhost:3000/challenge-complete
+    events:
+      tutorial-complete: true
 levels:
   - id: '1'
     steps:
