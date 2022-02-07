@@ -18,7 +18,7 @@ config:
   webhook:
     url: http:localhost:3000/challenge-complete
     events:
-      tutorial-complete: true
+      tutorial_complete: true
 levels:
   - id: '1'
     steps:
